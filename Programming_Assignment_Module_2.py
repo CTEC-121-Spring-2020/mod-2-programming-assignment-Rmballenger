@@ -12,23 +12,25 @@ Output: return value and description
 """
 
 #Ignore this please#
+#Ignore this please#
 
 
 
 
 import time
+from math import *
 class color:
     PURPLE = '\033[95m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     END = '\033[0m'
 
-
+#Ignore this please#
 #Ignore this please#
 
 
 def main():
-    '''
+
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Section 1 Demonstrate assignment statements:")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -119,6 +121,7 @@ def main():
 
     print("\n\n")
 
+
 # Section 4
 
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -137,6 +140,7 @@ def main():
 
     print("Really? Out of all the colors in the world",
           color.BOLD + StringGiven + color.END, "is yours? ")
+    print(type(StringGiven))
     time.sleep(2)
     print()
 
@@ -151,6 +155,7 @@ def main():
     print()
 
     print("Oh! only", IntGiven, "really? Quite interesting")
+    print(type(IntGiven))
     time.sleep(2)
     print()
 
@@ -161,22 +166,25 @@ def main():
     print()
 
     print("Well I can't really check your work so I just have to hope that 5.5 is the number right here -->", FloatGiven)
+    print(type(FloatGiven))
     time.sleep(2)
     print()
 
     # Last a number using eval
     EvalGiven = eval(input(
-        "Lets try some math for me, Go ahead and enter two big numbers for me to add. Go ahead with three digets each! \nIn xxx + xxx format please and thank you. \n"))
+        "Lets try some math for me, Go ahead and enter two big numbers for me to add. Go ahead with at least three digets each! \nIn xxx + xxx format please and thank you. \n"))
     time.sleep(1)
     print("Hmm.. that may actually be harder than I thought it would be. Let me really think on that one.")
     print()
     time.sleep(2)
     print("Alright, I think the answer is",
           EvalGiven, "but I'm not 100% sure.")
+    print(type(EvalGiven))
     time.sleep(1)
     print("Well I'm glad we could chat like this.")
 
     print("\n\n")
+
 
 # Section 5
 
@@ -197,8 +205,8 @@ def main():
 
     # Using an input function
 
-    word_1, word_2 = eval(str(input(
-        "What's your two favorite numbers? Seperate them with a comma please!\n")))
+    word_1, word_2 = eval(input(
+        "What's your two favorite numbers? Seperate them with a comma please!\n"))
     time.sleep(1)
     print()
     print("Oh, I wouldn't have expected you to like the number ",
@@ -209,7 +217,6 @@ def main():
 
     print("\n\n")
 
-    '''
 # Section 6
 
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -220,6 +227,13 @@ def main():
 
     print("\n\n")
 
+    # Integer arithmetic. Here I demonstrate how to do division of 5 by 2 in both ways for quotient and remainder.
+    ans_1 = 5/2
+    ans_2 = 5//2
+    print("If you're just wanting to see the quotient, you could do 5//2=", ans_2)
+    print("However if you'd like to see the remainder you'd need to do 5/2=", ans_1)
+
+    print("\n\n")
 
 # Section 7
 
@@ -231,13 +245,67 @@ def main():
 
     print("\n\n")
 
+    # Here I shall show you a list of book titles.
+    print("I really love The Lord of the Rings seires, the order they go in is:")
+    for i in ["Fellowship of the Ring", "The Two Towers", "Return of the King"]:
+        print(i)
+    print()
+
+    # Next up I show a look using range.
+    print("Can you count to 5? I can, check it out!")
+    for i in range(6):
+        print(i)
+    print("Can't forget that us computers start with 0!")
+    print()
+
+    # Last it's time to have a loop output every third number starting at 11 for 5 iterations.
+    print("Nothing witty here, just 11-26, going up 3 numbers for 5 iterations")
+    for i in range(11, 27, 3):
+        print(i)
+    time.sleep(1)
+
+    print("\n\n")
+
 
 # Section 8
 
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print("Section 8 Demonstrate the use of: The value pi, the square root function, the cell() function,")
-    print("\t\t the floor() function, quare a value, and cube a value.")
+    print("Section 8 Demonstrate the use of: The value pi, the square root function, the ceil() function,")
+    print("\t\t the floor() function, square a value, and cube a value.")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    time.sleep(1)
+
+    print("\n\n")
+
+    # Demonstration of the use of Value pi.
+    x = pi
+    print("To start, were going to take a look at the value pi. Also known as")
+    print(x)
+    print()
+
+    # Demonstrating the square root function.
+    print("Now can we take and squre pi? What do you think would happen?")
+    print(sqrt(x))
+    print("Wow!")
+    print()
+
+    # Demonstration of ceil() and floor() function.
+    print("What is the smallest whole number that is greater than pi?")
+    print(ceil(x))
+    print()
+
+    print("What about the largest whole number that is less than pi?")
+    print(floor(x))
+    print()
+
+    # Demonstration of squaring and cubing a value.
+    print("What do you think the pi times pi would be? Well I'll tell you!")
+    print(pow(x, 2))
+    print()
+
+    print("What about if we took and cubed pi?")
+    print(pow(x, 3))
+    print()
     time.sleep(1)
 
     print("\n\n")
@@ -250,18 +318,42 @@ def main():
     print("\t calculating the sum of the values and the sum of squares of the values.")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     time.sleep(1)
+    print("\n\n")
 
+    # To start I know I'm going to have 2 sums I'm using. One for the normal added values and one for those values
+    # squared. I then use the eval input from earlier to get five numbers and assign them to letters.
+    sum_1 = 0
+    sum_2 = 0
+    a, b, c, d, e = eval(input(
+        "Can you please pick five numbers for me? Seperate them with commas please!\n"))
+
+    # Next I used the numbers give, and using the loop I have it add each together in order and assign that value to
+    # the first variable, sum_1
+    for i in [a, b, c, d, e]:
+        sum_1 = sum_1 + i
+        print(i)
+    print("----")
+    time.sleep(1)
+    print(sum_1)
+    print()
+
+    # Next is to get the sqare of each number, then add them together.
+    print("Look at that! I added them all together for you. Would you like to know what would happen if")
+    print("we went and squared all those values and then added them together?")
+    print()
+    time.sleep(1)
+
+    # Here I used the same method as earlier, but now I'm using the pow() function
+    for i in [pow(a, 2), pow(b, 2), pow(c, 2), pow(d, 2), pow(e, 2)]:
+        sum_2 = sum_2 + i
+        print(i)
+    print("----")
+    time.sleep(1)
+    print(sum_2)
+
+    print("\n\n")
+    print("Thanks for coming to my Ted Talk")
     print("\n\n")
 
 
 main()
-
-
-'''
-# Evaluate an expression entered
-# Enter 3+4
-x,y, z = eval(input("Enter a number or a numeric expressions: "))
-print(aNumber)
-
-
-'''
