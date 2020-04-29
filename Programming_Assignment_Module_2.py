@@ -60,6 +60,7 @@ def main():
     print("Take a guess how many variables were used in this. I can't help it, I gotta tell ya! It was", NumberOfVariables)
 
     print("\n\n")
+    input("Press Enter to Continue...")
 
 # Section 2
 
@@ -91,6 +92,7 @@ def main():
     print("keywords. However I imagine there has to be an easier way to go about doing this.")
 
     print("\n\n")
+    input("Press Enter to Continue...")
 
 # Section 3
 
@@ -120,7 +122,7 @@ def main():
     print("\t   ____/___\\__")
 
     print("\n\n")
-
+    input("Press Enter to Continue...")
 
 # Section 4
 
@@ -184,7 +186,7 @@ def main():
     print("Well I'm glad we could chat like this.")
 
     print("\n\n")
-
+    input("Press Enter to Continue...")
 
 # Section 5
 
@@ -216,6 +218,7 @@ def main():
     time.sleep(1)
 
     print("\n\n")
+    input("Press Enter to Continue...")
 
 # Section 6
 
@@ -234,6 +237,7 @@ def main():
     print("However if you'd like to see the remainder you'd need to do 5/2=", ans_1)
 
     print("\n\n")
+    input("Press Enter to Continue...")
 
 # Section 7
 
@@ -265,7 +269,7 @@ def main():
     time.sleep(1)
 
     print("\n\n")
-
+    input("Press Enter to Continue...")
 
 # Section 8
 
@@ -309,7 +313,7 @@ def main():
     time.sleep(1)
 
     print("\n\n")
-
+    input("Press Enter to Continue...")
 
 # Section 9
 
@@ -352,8 +356,11 @@ def main():
     print(sum_2)
 
     print("\n\n")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Thanks for coming to my Ted Talk")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("\n\n")
+
 
 
 main()
